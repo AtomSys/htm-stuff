@@ -5,8 +5,14 @@
   <body onload="script()">
     <script>
       function script() {
-        if (string(window.location.href) == "https://atomsys.github.io/htm-stuff#secret") {
-          console.log("WIP")
+        if (string(window.location.href) == "https://atomsys.github.io/htm-stuff#google") {
+          var thewindow = window.open("about:blank");
+          const source = new XMLHttpRequest();
+          source.onload = function() {
+            thewindow.document.body.innerHTML == this.responseText;
+          }
+          source.open("GET", "https://www.google.com/", true);
+          source.send();
         }
       }
     </script>
